@@ -6,7 +6,7 @@ let activeEffect
 
 
 // 原始数据
-const data = { text: 'hello world', username: 'wzh' }
+const data = { text: 'hello world' }
 
 
 // effect 函数用于注册副作用函数
