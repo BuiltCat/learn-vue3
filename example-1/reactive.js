@@ -18,7 +18,7 @@ const obj = new Proxy(data, {
         // 设置属性值
         target[key] = newVal
         // 把副作用函数从桶中拿出来并执行
-        buket.forEach(fn => fn())
+        bucket.forEach(fn => fn())
         // 返回true 代表设置操作成功
         return true
     }
