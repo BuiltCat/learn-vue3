@@ -1,5 +1,5 @@
 // 储存副作用函数的同
-const buket = new Set()
+const bucket = new Set()
 
 // 原始数据
 const data = { text: 'hello world' }
@@ -9,7 +9,7 @@ const obj = new Proxy(data, {
     // 拦截读取操作
     get(target, key) {
         // 将副作用函数effect放入储存副作用函数的桶中
-        buket.add(effect)
+        bucket.add(effect)
         // 返回属性值
         return target[key]
     },
